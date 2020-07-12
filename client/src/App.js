@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import MultiChoiceCard from "./components/MultiChoiceCard";
 import choices from "./choice.json";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import {Col, Row, Container } from "./components/Grid";
+
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -11,8 +15,10 @@ class App extends Component {
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
-      // <Wrapper>
-        // <Title>Multiple Choice List</Title>
+<Container>       
+  <Nav /> 
+    <Row>        
+      <Col size="md-4">
         <div>
         {this.state.choices.map(choice => (
           <MultiChoiceCard
@@ -25,7 +31,10 @@ class App extends Component {
           />
         ))}
         </div>
-      // </Wrapper>
+      </Col>
+    </Row>
+  <Footer />
+</Container>
     );
   }
 }
