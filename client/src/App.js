@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { Col, Row, Container } from "./components/Grid";
 import API from "./utils/API";
+import Destination from "./pages/Destination";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -17,6 +18,9 @@ class App extends Component {
     return (
       <Container>
         <Nav />
+        {/*placeholder for the results from quiz */}
+        <Destination
+          city={["Houston", "Dallas", "Austin"][Math.floor(Math.random() * 3)]} />
         <Row>
           <Col size="md-4">
             <div>
