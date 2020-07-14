@@ -11,7 +11,6 @@ function Destination(props) {
             .catch(err => console.log(err));
     }, [])
 
-
     return (
         <p>
             Hello
