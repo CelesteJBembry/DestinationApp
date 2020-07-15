@@ -18,7 +18,8 @@ class App extends Component {
         <Nav />
         {/*placeholder for the results from quiz */}
         <Destination
-          city={["Houston", "Dallas", "Austin"][Math.floor(Math.random() * 3)]} />
+          // city={["New_York"][Math.floor(Math.random() * 2)]} />
+          city={"San_Francisco"} />
         <Row>
           <Col size="md-4">
             <div>
@@ -28,7 +29,6 @@ class App extends Component {
                   key={choice.id}
                   name={choice.name}
                   image={choice.image}
-                  occupation={choice.occupation}
                   location={choice.location}
                 />
               ))}
