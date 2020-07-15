@@ -5,18 +5,21 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { Col, Row, Container } from "./components/Grid";
 import API from "./utils/API";
+import Destination from "./pages/Destination";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     choices
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Container>
         <Nav />
+        {/*placeholder for the results from quiz */}
+        <Destination
+          // city={["New_York"][Math.floor(Math.random() * 2)]} />
+          city={"San_Francisco"} />
         <Row>
           <Col size="md-4">
             <div>
@@ -26,7 +29,6 @@ class App extends Component {
                   key={choice.id}
                   name={choice.name}
                   image={choice.image}
-                  occupation={choice.occupation}
                   location={choice.location}
                 />
               ))}
