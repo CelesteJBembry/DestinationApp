@@ -8,12 +8,10 @@ import API from "./utils/API";
 import Destination from "./pages/Destination";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     choices
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Container>
