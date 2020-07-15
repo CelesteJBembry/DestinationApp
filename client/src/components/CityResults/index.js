@@ -18,7 +18,6 @@ export function CityResults({
                     <Col size="xs-8 sm-9">
                         <h3>{cityObj.name}</h3>
 
-
                     </Col>
                 </Row>
             </Container>
