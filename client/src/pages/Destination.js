@@ -23,7 +23,4 @@ function Destination(props) {
 }
 
 
-
-
-
 export default Destination;
