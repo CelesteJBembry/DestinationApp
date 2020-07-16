@@ -1,9 +1,6 @@
 import React from "react";
 import { Col, Row, Container } from "../Grid";
 
-
-
-
 // Results container
 
 export function CityResults({
