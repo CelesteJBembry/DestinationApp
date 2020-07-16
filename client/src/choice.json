@@ -1,16 +1,20 @@
 [
     {
       "id": 1,
-      "name": "SpongeBob",
-      "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
-      "occupation": "Fry Cook",
-      "location": "A Pineapple Under the Sea"
+      "question": "What's your fav color?",
+      "image": "https://cdn.britannica.com/70/191970-050-1EC34EBE/Color-wheel-light-color-spectrum.jpg",
+      "option1": "blue",
+      "option2": "red",
+      "option3": "yellow",
+      "option4": "green"
     },
     {
       "id": 2,
-      "name": "Mr. Krabs",
-      "image": "https://vignette3.wikia.nocookie.net/vsbattles/images/8/80/Mr._Krabs.png/revision/latest?cb=20150919162131",
-      "occupation": "Restaurant Owner",
-      "location": "A Giant Anchor"
+      "question": "What's your favorite sport organization?",
+      "image": "https://media.npr.org/assets/img/2020/06/10/gettyimages-200199027-001-b5fb3d8d8469ab744d9e97706fa67bc5c0e4fa40.jpg",
+      "option1": "NBA",
+      "option2": "NFL",
+      "option3": "NHL",
+      "option4": "MLB"
     }
 ]

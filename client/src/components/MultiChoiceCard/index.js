@@ -1,28 +1,28 @@
 import React from "react";
+import { Container } from "../Grid";
+import {Button, ButtonGroup, Card} from 'react-bootstrap';
 //import "./style.css";
 
 function MultiChoiceCard(props) {
   return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
-      <div className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
-          </li>
-          <li>
-            <strong>Occupation:</strong> {props.occupation}
-          </li>
-          <li>
-            <strong>Location:</strong> {props.location}
-          </li>
-        </ul>
-      </div>
+    <Container>
 
-    </div>
-  );
+    <Card>
+  <Card.Body>
+    {props.question}
+    &nbsp;&nbsp;    
+    <ButtonGroup size="lg" className="mb-2">
+    <Button>{props.option1}</Button>
+    <Button>{props.option2}</Button>
+    <Button>{props.option3}</Button>
+    <Button>{props.option4}</Button>
+  </ButtonGroup>
+  </Card.Body>
+  </Card>
+  
+</Container>
+      );
 }
 
 export default MultiChoiceCard;
+
