@@ -1,20 +1,40 @@
 [
+
     {
       "id": 1,
-      "question": "What's your fav color?",
+      "question": "What's your favorite season?",
       "image": "https://cdn.britannica.com/70/191970-050-1EC34EBE/Color-wheel-light-color-spectrum.jpg",
-      "option1": "blue",
-      "option2": "red",
-      "option3": "yellow",
-      "option4": "green"
+      "option1": "Winter", 
+      "option2": "Summer",
+      "option3": "Autumn",
+      "option4": "Spring"
     },
     {
       "id": 2,
-      "question": "What's your favorite sport organization?",
+      "question": "Would you rather go skiing or dogsledding?",
       "image": "https://media.npr.org/assets/img/2020/06/10/gettyimages-200199027-001-b5fb3d8d8469ab744d9e97706fa67bc5c0e4fa40.jpg",
-      "option1": "NBA",
-      "option2": "NFL",
-      "option3": "NHL",
-      "option4": "MLB"
+      "option1": "Ski",
+      "option2": "Dogsled"
+    },
+    {
+      "id": 3,
+      "question": "Would you rather go to the rodeo or jetskiing?",
+      "image": "https://cdn.britannica.com/70/191970-050-1EC34EBE/Color-wheel-light-color-spectrum.jpg",
+      "option1": "Rodeo",
+      "option2": "Jetski"
+    },
+    {
+      "id": 4,
+      "question": "Would you rather go to a museum or go mountain climbing?",
+      "image": "https://cdn.britannica.com/70/191970-050-1EC34EBE/Color-wheel-light-color-spectrum.jpg",
+      "option1": "Museum",
+      "option2": "Mountain climbing"
+    },
+    {
+      "id": 5,
+      "question": "Would you rather go ziplining or go to a comedy show?",
+      "image": "https://cdn.britannica.com/70/191970-050-1EC34EBE/Color-wheel-light-color-spectrum.jpg",
+      "option1": "Zipline",
+      "option2": "Comedy Show"
     }
 ]
