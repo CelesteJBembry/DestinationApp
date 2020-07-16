@@ -3,9 +3,9 @@ import MultiChoiceCard from "./components/MultiChoiceCard";
 import choices from "./choice.json";
 import Footer from "./components/Footer";
 import { Col, Row, Container } from "./components/Grid";
-import API from "./utils/API";
+//import API from "./utils/API";
 import Destination from "./pages/Destination";
-import Navbar from "./components/Nav";
+import NavTabs from "./components/Nav";
 
 class App extends Component {
   state = {
@@ -15,11 +15,8 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Navbar />
-        {/*placeholder for the results from quiz */}
-        {/* <Destination
-          // city={["New_York"][Math.floor(Math.random() * 2)]} />
-          city={"San_Francisco"} /> */}
+        <NavTabs />
+        
         <br></br>
         <Row>
           <Col size="md-12">
@@ -39,7 +36,16 @@ class App extends Component {
             </div>
           </Col>
         </Row>
-        <Footer sticky="bottom"/>
+        <br/>
+<Row>
+  {/*placeholder for the results from quiz */}
+  <Destination
+          // city={["New_York"][Math.floor(Math.random() * 2)]} />
+          city={"Chicago"}
+           />
+</Row>
+<br/>
+        <Footer style={{color: "red"}}/>
       </Container>
     );
   }
