@@ -19,7 +19,7 @@ class App extends Component {
         {/*placeholder for the results from quiz */}
         <Destination
           // city={["New_York"][Math.floor(Math.random() * 2)]} />
-          city={"San_Francisco"} />
+          city={"Houston"} />
         <Row>
           <Col size="md-4">
             <div>
