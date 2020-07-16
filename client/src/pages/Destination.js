@@ -6,7 +6,6 @@ import { CityResults } from "../components/CityResults";
 function Destination(props) {
     const [state, setState] = useState({})
 
-
     useEffect(() => {
         API.fetchDestination(props.city)
             .then(destination => {

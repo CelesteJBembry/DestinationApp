@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 function NavTabs(props) {
+
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
+
         <a
           href="#home"
           onClick={() => props.handlePageChange("Home")}
@@ -13,6 +17,7 @@ function NavTabs(props) {
         </a>
       </li>
       <li className="nav-item">
+
         <a
           href="#Quiz"
           onClick={() => props.handlePageChange("Quiz")}
@@ -22,6 +27,7 @@ function NavTabs(props) {
         </a>
       </li>
       <li className="nav-item">
+
         <a
           href="#Destination"
           onClick={() => props.handlePageChange("Destination")}
@@ -31,6 +37,7 @@ function NavTabs(props) {
         </a>
       </li>
       <li className="nav-item">
+
         <a
           href="#contact"
           onClick={() => props.handlePageChange("Contact")}
@@ -39,7 +46,7 @@ function NavTabs(props) {
           Contact
         </a>
       </li>
-    </ul>
+    </ul >
   );
 }
 
