@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/destination_db", { useNewUrlParser: true }); //Brandon_Added
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password123!@ds125821.mlab.com:25821/heroku_j16c72l6", { useNewUrlParser: true }); //Brandon_Added
 
 // Define API routes here
 
