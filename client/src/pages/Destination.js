@@ -17,7 +17,7 @@ function Destination(props) {
     }, [])
 
     return (
-        <CityResults cityObj={state}></CityResults>
+        (state) ? <CityResults cityObj={state}></CityResults> : ""
     )
 }
 

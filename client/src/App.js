@@ -1,52 +1,41 @@
 import React, { Component } from "react";
 import MultiChoiceCard from "./components/MultiChoiceCard";
-import choices from "./choice.json";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
 import { Col, Row, Container } from "./components/Grid";
 //import API from "./utils/API";
 import Destination from "./pages/Destination";
 import NavTabs from "./components/Nav";
+import SignIn from "./pages/SignIn";
+import Quiz from "./pages/Quiz";
+import Contact from "./pages/Contact";
 
 class App extends Component {
-  state = {
-    choices
-  };
 
   render() {
     return (
-      <Container>
-        <NavTabs />
+      <Router>
+        <Container>
+          <NavTabs />
+          <Switch>
+            <Route exact path={["/", "/Home"]}>
+              <SignIn />
+            </Route>
+            <Route exact path="/Quiz">
+              <Quiz />
+            </Route>
+            <Route exact path="/Destination">
+              <Destination />
+            </Route>
+            <Route exact path="/Contact">
+              <Contact />
+            </Route>
 
-        <br></br>
-        <Row>
-          <Col size="md-12">
-            <div>
-              {this.state.choices.map(choice => (
-                <MultiChoiceCard
-                  id={choice.id}
-                  key={choice.id}
-                  question={choice.question}
-                  //image={choice.image}
-                  option1={choice.option1}
-                  option2={choice.option2}
-                  option3={choice.option3}
-                  option4={choice.option4}
-                />
-              ))}
-            </div>
-          </Col>
-        </Row>
-        <br />
-        <Row>
-          {/*placeholder for the results from quiz */}
-          <Destination
-            // city={["New_York"][Math.floor(Math.random() * 2)]} />
-            city={"Chicago"}
-          />
-        </Row>
-        <br />
-        <Footer style={{ color: "red" }} />
-      </Container>
+          </Switch>
+
+          <Footer style={{ color: "red" }} />
+        </Container >
+      </Router >
     );
   }
 }

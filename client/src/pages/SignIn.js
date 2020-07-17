@@ -1,8 +1,9 @@
 import React from "react";
 import Form from "../components/Firebase";
 
-function App() {
-  return <Form />;
+function SignIn() {
+  // return <Form />;
+  return <div>Sign In</div>
 }
 
-export default App;
+export default SignIn;
