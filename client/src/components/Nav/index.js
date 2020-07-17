@@ -39,7 +39,7 @@ function NavTabs(props) {
           to="/Contact"
           className={props.currentPage === "Contact" ? "nav-link active" : "nav-link"}
         >
-          Contact
+          Contact Us
         </Link>
       </li>
     </ul >

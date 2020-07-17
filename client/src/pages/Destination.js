@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import { CityResults } from "../components/CityResults";
-
-
 function Destination(props) {
     const [state, setState] = useState({})
 

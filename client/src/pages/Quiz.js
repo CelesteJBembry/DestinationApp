@@ -4,7 +4,6 @@ import { Col, Row, Container } from "../components/Grid";
 import MultiChoiceCard from "../components/MultiChoiceCard";
 
 function Quiz() {
-
     return (
         <Row>
             <Col size="md-12">
