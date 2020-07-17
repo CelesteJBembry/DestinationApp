@@ -25,17 +25,17 @@ class App extends Component {
               <Quiz />
             </Route>
             <Route exact path="/Destination">
-              <Destination />
+              <Destination city="Houston" />
+
             </Route>
             <Route exact path="/Contact">
               <Contact />
             </Route>
-
           </Switch>
-
           <Footer style={{ color: "red" }} />
         </Container >
       </Router >
+
     );
   }
 }
