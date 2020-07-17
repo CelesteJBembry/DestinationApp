@@ -6,7 +6,6 @@ import { CityResults } from "../components/CityResults";
 function Destination(props) {
     const [state, setState] = useState({})
 
-
     useEffect(() => {
         API.fetchDestination(props.city)
             .then(destination => {
@@ -18,12 +17,9 @@ function Destination(props) {
     }, [])
 
     return (
-        <CityResults cityObj={state}></CityResults>
+        (state) ? <CityResults cityObj={state}></CityResults> : ""
     )
 }
-
-
-
 
 
 export default Destination;
