@@ -1,4 +1,4 @@
 module.exports = {
-    Cities: require("./cities")
+    quizQuestions: require("./quizQuestionsModel")
   };
   

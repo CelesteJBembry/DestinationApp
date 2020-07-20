@@ -4,10 +4,17 @@ import { Col, Row, Container } from "../Grid";
 // Results container
 
 export function CityResults({
+<<<<<<< HEAD
     cityObj,
     tours
 }) {
     return (
+=======
+    cityObj
+}) 
+
+{   return (
+>>>>>>> 075036c3b996333bbaf54eca5c7340befc57a7a0
         <li className="list-group-item">
             <Container>
                 <Row>
@@ -15,7 +22,6 @@ export function CityResults({
                     </Col>
                     <Col size="xs-8 sm-9">
                         <h3>{cityObj.name}</h3>
-
                     </Col>
                 </Row>
             </Container>
