@@ -1,116 +1,109 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { withFirebase } from '../Firebase';
-import * as ROUTES from '../../constants/routes';
- 
-const SignUpPage = () => (
-  <div>
-    <h1>SignUp</h1>
-    <SignUpForm />
-    </div>
-);
+import React, { useState } from "react";
+import { Link } from "@reach/router";
+import {auth, generateUserDocument} from "../../firebase";
 
-const INITIAL_STATE = {
-    username: '',
-    email: '',
-    passwordOne: '',
-    passwordTwo: '',
-    error: null,
-  };
+  const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [displayName, setDisplayName] = useState("");
+  const [error, setError] = useState(null);
+  
 
-class SignUpFormBase extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { ...INITIAL_STATE };  
-
-
-    onChange = event => {
-        this.setState({ [event.target.name]: event.target.value });
-      };}
- 
-  onSubmit = event => {
-    const { username, email, passwordOne } = this.state;
- 
-    this.props.firebase
-      .doCreateUserWithEmailAndPassword(email, passwordOne)
-      .then(authUser => {
-        this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.HOME);
-      })
-      .catch(error => {
-        this.setState({ error });
-      });
- 
+  const createUserWithEmailAndPasswordHandler = async (event, email, password) => {
     event.preventDefault();
- 
-  }
- 
-  onChange = event => {
- 
+    try{
+      const {user} = await auth.createUserWithEmailAndPassword(email, password);
+      generateUserDocument(user, {displayName});
+    }
+    catch(error){
+      setError('Error Signing up with email and password');
+    }
+
+    setEmail("");
+    setPassword("");
+    setDisplayName("");
   };
- 
-  render() {
-    const {
-        username,
-        email,
-        passwordOne,
-        passwordTwo,
-        error,
-      } = this.state;
 
-      const isInvalid =
-      passwordOne !== passwordTwo ||
-      passwordOne === '' ||
-      email === '' ||
-      username === '';
+  const onChangeHandler = event => {
+    const { name, value } = event.currentTarget;
+    if (name === "userEmail") {
+      setEmail(value);
+    } else if (name === "userPassword") {
+      setPassword(value);
+    } else if (name === "displayName") {
+      setDisplayName(value);
+    }
+  };
 
-    return (
-      <form onSubmit={this.onSubmit}>
- <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="submit">
-            Sign Up
-            </button>
- 
-        {error && <p>{error.message}</p>}
-      </form>
-    );
-  }
-}
- 
-const SignUpLink = () => (
-  <p>
-    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
-  </p>
-);
-const SignUpForm = withRouter(withFirebase(SignUpFormBase));
-
-export default SignUpPage;
- 
-export { SignUpForm, SignUpLink };
+  return (
+    <div className="mt-8">
+      <h1 className="text-3xl mb-2 text-center font-bold">Sign Up</h1>
+      <div className="border border-blue-400 mx-auto w-11/12 md:w-2/4 rounded py-8 px-4 md:px-8">
+        {error !== null && (
+          <div className="py-4 bg-red-600 w-full text-white text-center mb-3">
+            {error}
+          </div>
+        )}
+        <form className="">
+          <label htmlFor="displayName" className="block">
+            Display Name:
+          </label>
+          <input
+            type="text"
+            className="my-1 p-1 w-full "
+            name="displayName"
+            value={displayName}
+            placeholder="E.g: Faruq"
+            id="displayName"
+            onChange={event => onChangeHandler(event)}
+          />
+          <label htmlFor="userEmail" className="block">
+            Email:
+          </label>
+          <input
+            type="email"
+            className="my-1 p-1 w-full"
+            name="userEmail"
+            value={email}
+            placeholder="E.g: faruq123@gmail.com"
+            id="userEmail"
+            onChange={event => onChangeHandler(event)}
+          />
+          <label htmlFor="userPassword" className="block">
+            Password:
+          </label>
+          <input
+            type="password"
+            className="mt-1 mb-3 p-1 w-full"
+            name="userPassword"
+            value={password}
+            placeholder="Your Password"
+            id="userPassword"
+            onChange={event => onChangeHandler(event)}
+          />
+          <button
+            className="bg-green-400 hover:bg-green-500 w-full py-2 text-white"
+            onClick={event => {
+              createUserWithEmailAndPasswordHandler(event, email, password);
+            }}
+          >
+            Sign up
+          </button>
+        </form>
+        <p className="text-center my-3">or</p>
+        <button
+          className="bg-red-500 hover:bg-red-600 w-full py-2 text-white"
+        >
+          Sign In with Google
+        </button>
+        <p className="text-center my-3">
+          Already have an account?{" "}
+          <Link to="/" className="text-blue-500 hover:text-blue-600">
+            Sign in here
+          </Link>
+        </p>
+      </div>
+    </div>
+  );
+};
+export default SignUp;
