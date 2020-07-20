@@ -42,6 +42,7 @@ export const generateUserDocument = async (user, additionalData) => {
   }
   return getUserDocument(user.uid);
 };
+
 const getUserDocument = async uid => {
   if (!uid) return null;
   try {
