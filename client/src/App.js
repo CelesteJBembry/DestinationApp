@@ -15,27 +15,31 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Container>
-          <NavTabs />
-          <Switch>
+      <Container>
+         <NavTabs />
+         
+         <Switch>
             <Route exact path={["/", "/Home"]}>
               <SignIn />
             </Route>
+            
             <Route exact path="/Quiz">
-              <Quiz />
+               <Quiz />
             </Route>
+            
             <Route exact path="/Destination">
-              <Destination />
+               <Destination />
             </Route>
+            
             <Route exact path="/Contact">
-              <Contact />
+               <Contact />
             </Route>
+         
+         </Switch>
 
-          </Switch>
-
-          <Footer style={{ color: "red" }} />
-        </Container >
-      </Router >
+         <Footer style={{ color: "red" }} />
+      </Container >
+   </Router >
     );
   }
 }

@@ -5,8 +5,9 @@ import { Col, Row, Container } from "../Grid";
 
 export function CityResults({
     cityObj
-}) {
-    return (
+}) 
+
+{   return (
         <li className="list-group-item">
             <Container>
                 <Row>
@@ -14,7 +15,6 @@ export function CityResults({
                     </Col>
                     <Col size="xs-8 sm-9">
                         <h3>{cityObj.name}</h3>
-
                     </Col>
                 </Row>
             </Container>
