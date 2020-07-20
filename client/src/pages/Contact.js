@@ -1,11 +1,11 @@
 import React from "react";
 import {Form, Col} from 'react-bootstrap';
-//import { Container } from "../Grid";
+import { Container } from "../Grid";
 
 
 function Contact() {
     return (
-    //<Container>
+    <Container>
     <Form>
         <h3>Contact Us!</h3>
         <Form.Row>
@@ -27,7 +27,32 @@ function Contact() {
             <Form.Control as="textarea" rows="4" />
         </Form.Group>
 </Form>
-//</Container>
+
+<div className="container">
+<div className="jumbotron">
+  <h1>The Destiny App Development Team</h1>
+  <p>Creating new solutions to challenging problems.</p>
+  <p>
+    <button className="btn btn-primary btn-lg">Learn more</button>
+  </p>
+</div>
+<div className="card mb-4">
+  <div className="card-header">
+    <h3>Team Members</h3>
+   
+  </div>
+  <div className="card-body">
+    <p className="card-text"><a href="">LinkedIn</a></p>
+    <ul>
+      <li>Celeste Bembry</li>
+      <li>Harpreet Aulakh</li>
+      <li>Brandon Lopez</li>
+      <li>Lewis Cruz</li>
+    </ul>
+  </div>
+</div>
+</div>
+</Container>
     )
 }
 
