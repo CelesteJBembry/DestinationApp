@@ -3,7 +3,7 @@ import React from "react";
 
 function Contact() {
     return <div>
-        Contact Destiny Destination Suggestion App
+        Contact Destiny Destination Team!!!
     </div>
 }
 

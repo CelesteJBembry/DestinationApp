@@ -11,7 +11,10 @@ import Quiz from "./pages/Quiz";
 import Contact from "./pages/Contact";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
 
+  }
   render() {
     return (
       <Router>
@@ -24,8 +27,8 @@ class App extends Component {
             <Route exact path="/Quiz">
               <Quiz />
             </Route>
-            <Route exact path="/Destination">
-              <Destination city="Houston" />
+            <Route exact path="/Destination/:city">
+              <Destination />
 
             </Route>
             <Route exact path="/Contact">
