@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "@reach/router";
+import {auth} from "../../firebase";
 
 const SignIn = () => {
     const [email, setEmail] = useState('');

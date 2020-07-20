@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "@reach/router";
+import { BrowserRouter as Router } from 'react-router-dom'
+
+import {auth} from "../../firebase";
 
 const PasswordReset = () => {
   const [email, setEmail] = useState("");

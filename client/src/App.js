@@ -6,9 +6,11 @@ import { Col, Row, Container } from "./components/Grid";
 //import API from "./utils/API";
 import Destination from "./pages/Destination";
 import NavTabs from "./components/Nav";
-import SignIn from "./pages/SignIn";
+//import SignIn from "./pages/SignIn";
 import Quiz from "./pages/Quiz";
 import Contact from "./pages/Contact";
+import Application from "./components/Application";
+import UserProvider from "./components/UserProvider"
 
 class App extends Component {
 
@@ -16,11 +18,17 @@ class App extends Component {
     return (
       <Router>
         <Container>
+{/* firebase code 
+          <Application></Application>*/}
+{/* nav code */}
           <NavTabs />
           <Switch>
             <Route exact path={["/", "/Home"]}>
-              <SignIn />
+              <UserProvider>
+              <Application />
+              </UserProvider>
             </Route>
+            
             <Route exact path="/Quiz">
               <Quiz />
             </Route>
@@ -32,7 +40,7 @@ class App extends Component {
             </Route>
           </Switch>
 
-          <Footer style={{ color: "red" }} />
+          <Footer />
         </Container >
       </Router >
     );
