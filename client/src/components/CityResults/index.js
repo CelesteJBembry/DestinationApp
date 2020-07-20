@@ -4,7 +4,8 @@ import { Col, Row, Container } from "../Grid";
 // Results container
 
 export function CityResults({
-    cityObj
+    cityObj,
+    tours
 }) {
     return (
         <li className="list-group-item">
