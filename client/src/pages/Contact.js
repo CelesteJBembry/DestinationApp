@@ -1,6 +1,6 @@
 import React from "react";
-import {Form, Col} from 'react-bootstrap';
-import { Container } from "../Grid";
+import { Form, Col } from 'react-bootstrap';
+//import { Container } from "../Grid";
 
 
 function Contact() {
