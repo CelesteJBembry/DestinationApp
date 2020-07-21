@@ -36,10 +36,6 @@ function ListOfCities() {
                 </li>
 
 
-
-
-
-
             </ul>
 
         </div >
