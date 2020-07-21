@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import NavTabs from "./NavTabs";
 import Home from "../../pages/SignIn";
 import Quiz from "../../pages/Quiz";

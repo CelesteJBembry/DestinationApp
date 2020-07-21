@@ -5,12 +5,12 @@ import MultiChoiceCard from "../components/MultiChoiceCard";
 
 function Quiz() {
     const [questions, setQuestions] = useState([])
-    
-    useEffect(() =>{
-    loadQuestions()
-    },[])
 
-    function loadQuestions(){
+    useEffect(() => {
+        loadQuestions()
+    }, [])
+
+    function loadQuestions() {
         API.getQuestions()
         .then(res=>{
             setQuestions(res.data)
@@ -36,12 +36,12 @@ function Quiz() {
     )
 }
 
-    export default Quiz;
+export default Quiz;
 
 
 
 
 
 
-    
+
 

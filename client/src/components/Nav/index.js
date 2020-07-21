@@ -7,7 +7,6 @@ function NavTabs(props) {
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
-
         <Link
           to="/Home"
           className={props.currentPage === "Home" ? "nav-link active" : "nav-link"}
@@ -39,7 +38,7 @@ function NavTabs(props) {
           to="/Contact"
           className={props.currentPage === "Contact" ? "nav-link active" : "nav-link"}
         >
-          Contact
+          Contact Us
         </Link>
       </li>
     </ul >
