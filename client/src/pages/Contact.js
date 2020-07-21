@@ -5,7 +5,7 @@ import { Form, Col } from 'react-bootstrap';
 
 function Contact() {
     return (
-    <Container>
+    <div>
     <Form>
         <h3>Contact Us!</h3>
         <Form.Row>
@@ -52,7 +52,7 @@ function Contact() {
   </div>
 </div>
 </div>
-</Container>
+</div>
     )
 }
 
