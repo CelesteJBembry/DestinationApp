@@ -8,15 +8,15 @@ export default {
 	getQuestions: function () {
 		return axios.get("/api/questions");
 	},
-	getBook: function(id) {
+	getQuestion: function(id) {
 		return axios.get("/api/questions/" + id);
 	  },
-	  // Deletes the book with the given id
-	  deleteBook: function(id) {
+	  // Deletes the Question with the given id
+	  deleteQuestion: function(id) {
 		return axios.delete("/api/questions/" + id);
 	  },
-	  // Saves a book to the database
-	  saveBook: function(questionData) {
+	  // Saves a Question to the database
+	  saveQuestion: function(questionData) {
 		return axios.post("/api/questions", questionData);
 	  },
 	  
