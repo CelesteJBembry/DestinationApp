@@ -2,8 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import MultiChoiceCard from "../components/MultiChoiceCard";
+import { withRouter } from 'react-router-dom'
 
-function Quiz() {
+// const Button = withRouter(({ history }) => (
+//   <button
+//     type='button'
+//     onClick={() => { history.push('/new-location') }}
+//   >
+//     Click Me!
+//   </button>
+// ))
+
+function Quiz(props) {
     const [questions, setQuestions] = useState([])
     const [choices,setChoices]= useState([])
 
@@ -32,6 +42,7 @@ function Quiz() {
 
     function switchCase(){
         console.log(choices)
+        props.history.push('/Destination/New_Orleans/')
         
     }
     
@@ -61,7 +72,7 @@ function Quiz() {
     )
 }
 
-export default Quiz;
+export default withRouter(Quiz);
 
 
 
