@@ -6,6 +6,7 @@ import { Form, Col } from 'react-bootstrap';
 function Contact() {
   return (
     <div>
+
       <Form>
         <h3>Contact Us!</h3>
         <Form.Row>
@@ -28,19 +29,36 @@ function Contact() {
         </Form.Group>
       </Form>
 
-      <div className="container">
-        <div className="jumbotron">
-          <h1>The Destiny App Development Team</h1>
-          <p>Creating new solutions to challenging problems.</p>
-          <p>
-            <button className="btn btn-primary btn-lg">Learn more</button>
-          </p>
-        </div>
-        <div className="card mb-4">
-          <div className="card-header">
-            <h3>Team Members</h3>
 
+      <div className="jumbotron">
+        <h1>The Destiny App Development Team</h1>
+        <p>Creating new solutions to challenging problems.</p>
+        <p>
+          <button className="btn btn-primary btn-lg">Learn more</button>
+        </p>
+      </div>
+
+      <div className="card mb-4">
+        <div className="card-header">
+          <h3>Team Members</h3>
+
+          <div className="container">
+            <div className="jumbotron">
+              <h1>The Destiny App Development Team</h1>
+              <p>Creating new solutions to challenging problems.</p>
+              <p>
+                <button className="btn btn-primary btn-lg">Learn more</button>
+              </p>
+            </div>
           </div>
+
+          <div className="card mb-4">
+            <div className="card-header">
+              <h3>Team Members</h3>
+
+            </div>
+          </div>
+
           <div className="card-body">
             <p className="card-text"><a href="">LinkedIn</a></p>
             <ul>
@@ -53,6 +71,7 @@ function Contact() {
         </div>
       </div>
     </div>
+
   )
 }
 
