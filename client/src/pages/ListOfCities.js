@@ -28,11 +28,21 @@ function ListOfCities() {
                     <Link to="/Destination/Miami">Miami </Link>
                 </li>
                 <li>
+                    <Link to="/Destination/"> </Link>
+                </li>
+                <li>
                     <Link to="/Destination/New_Orleans">New Orleans </Link>
                 </li>
 
+
                 <li>
-                    <Link to="/Destination/San_Francisco">San Francisco </Link>
+                    <Link to="/Destination/"> </Link>
+                </li>
+                <li>
+                    <Link to="/Destination/"> </Link>
+                </li>
+                <li>
+                    <Link to="/Destination/"> </Link>
                 </li>
 
 
