@@ -13,38 +13,42 @@ import Application from "./components/Application";
 import UserProvider from "./components/UserProvider"
 
 class App extends Component {
+  constructor(props) {
+    super(props);
 
+  }
   render() {
     return (
       <Router>
         <Container>
-{/* firebase code 
+          {/* firebase code 
           <Application></Application>*/}
-{/* nav code */}
+          {/* nav code */}
           <NavTabs />
           <Switch>
             <Route exact path={["/", "/Home"]}>
               <UserProvider>
-              <Application />
+                <Application />
               </UserProvider>
             </Route>
-            
+
             <Route exact path="/Quiz">
-               <Quiz />
+              <Quiz />
             </Route>
-            
-            <Route exact path="/Destination">
-               <Destination />
+            <Route exact path="/Destination/:city">
+              <Destination />
+
             </Route>
-            
+
             <Route exact path="/Contact">
-               <Contact />
+              <Contact />
             </Route>
           </Switch>
 
           <Footer />
         </Container >
       </Router >
+
     );
   }
 }

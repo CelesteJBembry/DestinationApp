@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+import React from 'react';
+import { BrowserRouter as Router, Route, } from 'react-router-dom';
+
+=======
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,} from 'react-router-dom';
+>>>>>>> 075036c3b996333bbaf54eca5c7340befc57a7a0
 import Navigation from '../Navigation';
 import LandingPage from '../Landing';
 import SignUpPage from '../SignUp';

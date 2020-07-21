@@ -5,15 +5,15 @@ import MultiChoiceCard from "../components/MultiChoiceCard";
 
 function Quiz() {
     const [questions, setQuestions] = useState([])
-    
-    useEffect(() =>{
-    loadQuestions()
-    },[])
 
-    function loadQuestions(){
+    useEffect(() => {
+        loadQuestions()
+    }, [])
+
+    function loadQuestions() {
         API.getQuestions()
-        .then(res=>
-            setQuestions(res.data)
+            .then(res =>
+                setQuestions(res.data)
             )
             .catch(err => console.log(err));
     };
@@ -23,23 +23,23 @@ function Quiz() {
             <Col size="md-12">
                 <div>
 
-                        <MultiChoiceCard
-                            key={questions.id}
-                            question={questions.question}
-                            answers={questions.answers}
-                        />
+                    <MultiChoiceCard
+                        key={questions.id}
+                        question={questions.question}
+                        answers={questions.answers}
+                    />
                 </div>
             </Col>
         </Row>
     )
 }
 
-    export default Quiz;
+export default Quiz;
 
 
 
 
 
 
-    
+
 
