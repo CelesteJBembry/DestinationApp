@@ -6,7 +6,7 @@ require("dotenv").config();
 export default {
 
 	getQuestions: function () {
-		return axios.get("/api/Q");
+		return axios.get("/api/QuizQuestions");
 	},
 
 	fetchDestination: function (city) {
@@ -21,8 +21,8 @@ export default {
 		const tourQueryUrl = `${triposoTourUrl}?location_ids=${city}&account=${process.env.REACT_APP_ACCOUNT}&token=${process.env.REACT_APP_TOKEN}`;
 
         return axios
-			.get(queryUrl)
-		//.get(tourQueryUrl)
+			//.get(queryUrl)
+		.get(tourQueryUrl)
 
 	}
 };

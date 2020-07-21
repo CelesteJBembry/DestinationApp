@@ -11,7 +11,6 @@ function Destination(props) {
             .then(destination => {
                 setState(destination.data.results[0]);
                 console.log(destination.data);
-
             })
             .catch(err => console.log(err));
     }, [])
