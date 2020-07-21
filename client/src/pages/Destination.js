@@ -6,7 +6,7 @@ import Contact from "./Contact";
 import { Container } from "../components/Grid";
 
 
-function Destination(props) {
+function Destination() {
     const [state, setState] = useState({})
     const [tour, setTour] = useState({})
     const { city } = useParams()
@@ -30,20 +30,18 @@ function Destination(props) {
         return (
             <div>
                 <h3>Your Next Destination City is {state.id},{state.parent_id}</h3>
-                <li>{state.snippet}</li>
+                <p>{state.snippet}</p>
                 <img src={state.images[0].source_url} style={{ height: "50%", width: "90%" }} />
                 <h3>Availble Tours in {state.id}</h3>
-                <li>Tour Name : {tour.name}</li>
+                <p>Tour Name : {tour.name}</p>
                 <li>Amount: {tour.price.amount}</li>
-                <a href={tour.vendor_tour_url} >Click for more Info</a>
-
-
-
+                {/* Add target blank to open up in new tab*/}
+                <a href={tour.vendor_tour_url} target="_blank">Click for more Info</a>
             </div >
 
         )
     }
-    else { return ("Loading") }
+    else { return ("Loading...") }
 
 
 }

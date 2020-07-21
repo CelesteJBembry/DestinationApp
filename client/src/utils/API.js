@@ -8,6 +8,11 @@ export default {
     getQuestions: function () {
         return axios.get("/api/questions");
     },
+    fetchDestination: function (city) {
+        const triposoUrl = "https://www.triposo.com/api/latest/location.json";
+        const queryUrl = `${triposoUrl}?id=${city}&account=${process.env.REACT_APP_ACCOUNT}&token=${process.env.REACT_APP_TOKEN}`;
+        return axios.get(queryUrl);
+    },
 
     fetchTour: function (city) {
 

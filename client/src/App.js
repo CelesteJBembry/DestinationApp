@@ -10,7 +10,8 @@ import NavTabs from "./components/Nav";
 import Quiz from "./pages/Quiz";
 import Contact from "./pages/Contact";
 import Application from "./components/Application";
-import UserProvider from "./components/UserProvider"
+import UserProvider from "./components/UserProvider";
+import ListOfCities from "./pages/ListOfCities";
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +35,9 @@ class App extends Component {
 
             <Route exact path="/Quiz">
               <Quiz />
+            </Route>
+            <Route exact path="/Destination">
+              <ListOfCities />
             </Route>
             <Route exact path="/Destination/:city">
               <Destination />
