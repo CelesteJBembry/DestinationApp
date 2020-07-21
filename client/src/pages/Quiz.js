@@ -12,9 +12,10 @@ function Quiz() {
 
     function loadQuestions(){
         API.getQuestions()
-        .then(res=>
+        .then(res=>{
             setQuestions(res.data)
-            )
+            console.log(res)
+        })
             .catch(err => console.log(err));
     };
 
@@ -22,12 +23,13 @@ function Quiz() {
         <Row>
             <Col size="md-12">
                 <div>
-
-                        <MultiChoiceCard
+                {questions.map(questions => (
+                <MultiChoiceCard
                             key={questions.id}
-                            question={questions.question}
+                            questions={questions.question}
                             answers={questions.answers}
-                        />
+                        />))}
+                        
                 </div>
             </Col>
         </Row>

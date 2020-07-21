@@ -12,15 +12,13 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password123!@ds125821.mlab.com:25821/heroku_j16c72l6", { useNewUrlParser: true }); //Brandon_Added
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/destination_db", { useNewUrlParser: true, useUnifiedTopology: true  }); //Brandon_Added
 
 // Define API routes here
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+app.use(require("./routes"))
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

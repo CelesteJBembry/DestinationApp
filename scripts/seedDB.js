@@ -72,9 +72,9 @@ mongoose.connect(
         ]
       }
   ]
-  db.questions
+  db.quizQuestions
   .remove({})
-  .then(() => db.Book.collection.insertMany(questions))
+  .then(() => db.quizQuestions.collection.insertMany(questions))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
