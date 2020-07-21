@@ -4,10 +4,12 @@ import { image } from "react";
 // Results container
 
 export function CityResults({
+
     cityObj,
-    tour
+    tours
 }) {
     return (
+
         <li className="list-group-item">
             <Container>
                 <Row>

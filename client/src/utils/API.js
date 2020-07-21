@@ -20,7 +20,19 @@ export default {
         const tourQueryUrl = `${triposoTourUrl}location_ids=${city}&account=${process.env.REACT_APP_ACCOUNT}&token=${process.env.REACT_APP_TOKEN}`;
 
         return axios
-            .get(tourQueryUrl)
+			//.get(queryUrl)
+		.get(tourQueryUrl)
 
-    }
-}
+	}
+};
+
+// export default {
+
+//     fetchDestination: function (tours) {
+
+//         const triposoTourUrl = "https://www.triposo.com/api/20200405/tour.json?";
+//         const tourQueryUrl = `${triposoTourUrl}?location_ids=${city}&account=${process.env.REACT_APP_ACCOUNT}&token=${process.env.REACT_APP_TOKEN}`;
+
+
+//         return axios
+//             .get(tourQueryUrl)
