@@ -29,13 +29,21 @@ function Destination() {
     if (state.images, tour.name) {
         return (
             <div>
-                <h3>Your Next Destination City is {state.id},{state.parent_id}</h3>
+                <h2>Your Next Destination</h2>
+                <br></br>
+                <h2>{state.id}, {state.parent_id}</h2>
+                <br></br>
                 <p>{state.snippet}</p>
                 <img src={state.images[0].source_url} style={{ height: "50%", width: "90%" }} />
+                <br></br>
+                <br></br>
                 <h3>Availble Tours in {state.id}</h3>
+                <br></br>
                 <p>Tour Name : {tour.name}</p>
-                <li>Amount: {tour.price.amount}</li>
-                {/* Add target blank to open up in new tab*/}
+
+                {/* var n = num.toFixed(2) */}
+                <p>Amount: {tour.price.amount * 1.15}</p>
+
                 <a href={tour.vendor_tour_url} target="_blank">Click for more Info</a>
             </div >
 

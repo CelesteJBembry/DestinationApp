@@ -8,15 +8,36 @@ function ListOfCities() {
 
             <h3>List of Top Cities</h3>
             <ul>
+
                 <li>
-                    <Link to="/Destination/New_York_City">New York </Link>
+                    <Link to="/Destination/Boston">Boston</Link>
                 </li>
                 <li>
-                    <Link to="/Destination/Austin">Austin </Link>
+                    <Link to="/Destination/Chicago">Chicago </Link>
+                </li>
+                <li>
+                    <Link to="/Destination/Denver">Denver </Link>
+                </li>
+                <li>
+                    <Link to="/Destination/Las_Vegas2C_Nevada">Las Vegas </Link>
                 </li>
                 <li>
                     <Link to="/Destination/Los_Angeles">Los Angeles </Link>
                 </li>
+                <li>
+                    <Link to="/Destination/Miami">Miami </Link>
+                </li>
+                <li>
+                    <Link to="/Destination/New_Orleans">New Orleans </Link>
+                </li>
+
+                <li>
+                    <Link to="/Destination/San_Francisco">San Francisco </Link>
+                </li>
+
+
+
+
 
 
             </ul>
