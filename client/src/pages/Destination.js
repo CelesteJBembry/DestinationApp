@@ -52,8 +52,8 @@ function Destination() {
                 </Card.Body>
                 </Card>
                 <br></br>
-        <Link variant="info"
-          to="/Destination"
+                
+        <Link to="/Destination"
         >
           &larr; Back to View More Cities
         </Link>

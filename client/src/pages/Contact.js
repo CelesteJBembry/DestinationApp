@@ -11,10 +11,23 @@ function Contact() {
           <button className="btn btn-primary btn-lg">Learn more</button>
         </p>
         <ListGroup variant="flush">
-        <ListGroup.Item>Celeste Bembry</ListGroup.Item>
-        <ListGroup.Item>Brandon Lopez</ListGroup.Item>
-        <ListGroup.Item>Harpreet Aulakh</ListGroup.Item>
-        <ListGroup.Item>Lewis Cruz</ListGroup.Item>
+        <ListGroup.Item>Celeste Bembry{" "}{" "}| Contact Here: {" "}{" "}
+        <a href="https://www.linkedin.com/in/celestejbembry/">LinkedIn</a>{" "}{" "}
+        <a href="https://github.com/CelesteJBembry">GitHub</a>
+        </ListGroup.Item>
+        <ListGroup.Item>Brandon Lopez{" "}{" "}| Contact Here: {" "}{" "}
+        <a href="https://www.linkedin.com/in/brandon-lopez-280334106/">LinkedIn</a>{" "}{" "}
+        <a href="https://github.com/bl7722">GitHub</a>
+        </ListGroup.Item>
+        <ListGroup.Item>Harpreet Aulakh{" "}{" "}| Contact Here: {" "}{" "}
+        <a href="https://www.linkedin.com/in/harpreet-aulakh-houston-texas/">LinkedIn</a>{" "}{" "}
+        <a href="https://github.com/tuhituhi18">GitHub</a>
+        </ListGroup.Item>
+        <ListGroup.Item>Lewis Cruz{" "}{" "}| Contact Here: {" "}{" "}
+        <a href="https://www.linkedin.com/in/lewis-c-2a775b1a8/">LinkedIn</a>{" "}{" "}
+        <a href="https://github.com/lewismcruz">GitHub</a>
+        </ListGroup.Item>
+        
         </ListGroup>
       </div>
 

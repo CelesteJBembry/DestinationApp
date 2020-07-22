@@ -61,10 +61,7 @@ const SignIn = () => {
           </button>
         </form>
         <p className="text-center my-3">or</p>
-        <button
-          className="bg-red-500 hover:bg-red-600 w-full py-2 text-white">
-          Sign in with Google
-        </button>
+ 
         <p className="text-center my-3">
           Don't have an account?{" "}
           <Link to="signUp" className="text-blue-500 hover:text-blue-600">
@@ -72,7 +69,7 @@ const SignIn = () => {
           </Link>{" "}
           <br />{" "}
           <Link to = "passwordReset" className="text-blue-500 hover:text-blue-600">
-            Forgot Password?
+          {" "}Forgot Password?
           </Link>
         </p>
       </div>
