@@ -11,16 +11,16 @@ export function CityResults({
     return (
 
         <li className="list-group-item">
-            <Container>
-                <Row>
-                    <Col size="xs-4 sm-2">
-                    </Col>
-                    <Col size="xs-8 sm-9">
+            <div>
+                <div>
+                    <div size="xs-4 sm-2">
+                    </div>
+                    <div size="xs-8 sm-9">
                         <h3>Your Next Destination City is {cityObj.name}</h3>
 
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </li>
     );
 }
