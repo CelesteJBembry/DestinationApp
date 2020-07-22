@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import MultiChoiceCard from "./components/MultiChoiceCard";
+// import MultiChoiceCard from "./components/MultiChoiceCard";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
 import { Col, Row, Container } from "./components/Grid";
-//import API from "./utils/API";
+// import API from "./utils/API";
 import Destination from "./pages/Destination";
 import NavTabs from "./components/Nav";
 //import SignIn from "./pages/SignIn";
 import Quiz from "./pages/Quiz";
 import Contact from "./pages/Contact";
 import Application from "./components/Application";
-import UserProvider from "./components/UserProvider"
+import UserProvider from "./components/UserProvider";
+import ListOfCities from "./pages/ListOfCities";
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +35,9 @@ class App extends Component {
 
             <Route exact path="/Quiz">
               <Quiz />
+            </Route>
+            <Route exact path="/Destination">
+              <ListOfCities />
             </Route>
             <Route exact path="/Destination/:city">
               <Destination />
