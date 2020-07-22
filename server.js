@@ -12,8 +12,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/destination_db", { useNewUrlParser: true, useUnifiedTopology: true  }); //Brandon_Added
-
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/destination_db", { useNewUrlParser: true, useUnifiedTopology: true  }); //Brandon_Added
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password123!@ds125821.mlab.com:25821/heroku_j16c72l6", { useNewUrlParser: true, useUnifiedTopology: true  }); 
 // Define API routes here
 
 // Send every other request to the React app

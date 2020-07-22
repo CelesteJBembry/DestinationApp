@@ -46,7 +46,7 @@ function Destination() {
                 <Card.Body>
                     <Card.Title>Tour : {tour.name}</Card.Title>
                     <Card.Text>
-                    Price: {tour.price.amount * 1.15}
+                    Price: ${tour.price.amount * 1.15.toFixed(0)}
                     </Card.Text>
                     <Button variant="info" href={tour.vendor_tour_url} target="_blank">Click for more Info</Button>
                 </Card.Body>
