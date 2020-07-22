@@ -40,10 +40,10 @@ function Destination() {
                 <br></br>
                 <h3>Availble Tours in {state.id}</h3>
                 <br></br>
-                <p>Tour Name : {tour.name}</p>
+                <p>Tour Name: {tour.name}</p>
 
-                {/* var n = num.toFixed(2) */}
-                <p>Amount: {tour.price.amount * 1.15}</p>
+
+                <p>Amount: ${(tour.price.amount * 1.15).toFixed(2)}</p>
 
                 <a href={tour.vendor_tour_url} target="_blank">Click for more Info</a>
             </div >
