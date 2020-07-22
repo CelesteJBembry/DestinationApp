@@ -7,8 +7,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-image: url(./components/Images/destinations.png) */
+  
 }
-
+.text-center {
+text-align: center;
+}
 .nav-link {
   color: black;
 }
