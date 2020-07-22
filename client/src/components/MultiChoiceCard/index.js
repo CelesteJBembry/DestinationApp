@@ -7,20 +7,30 @@ import {Button, ButtonGroup, Card} from 'react-bootstrap';
 function MultiChoiceCard(props) {
 
 return (
-<Container>
-   <Card>
-      <Card.Body>
-      
-         <ButtonGroup size="lg" className="mb-2">
-            <Button>{props.answer}</Button>
-            <Button>{props.answer}</Button>
-            <Button>{props.answer}</Button>
-            <Button>{props.answer}</Button>
-      </ButtonGroup>
-      
-      </Card.Body>
-   </Card>
-</Container>
+
+      <Card>
+         <Card.Body>
+         <p>{props.question}</p>
+            <ButtonGroup size="lg" className="mb-2">
+               {props.answers.map((answer,i)=>{
+
+                  return (
+                  <div key ={i}> 
+                  <Button onClick= {props.loadChoices}
+                  >{answer["answer"+(i+1)]}</Button>
+                  <img height = "100" width= "100"
+                  src= {answer["img"] }/>
+
+                  </div>
+               
+
+               )})}
+            
+            </ButtonGroup>
+         
+         </Card.Body>
+      </Card>
+   
 );
 }
 export default MultiChoiceCard;

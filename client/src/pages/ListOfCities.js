@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function ListOfCities() {
     return (
         <div className="text-center" >
-
             <h3>List of Top Cities</h3>
             <br></br>
             <p>
@@ -38,10 +37,6 @@ function ListOfCities() {
             <p>
                 <Link to="/Destination/Seattle">Seattle </Link>
             </p>
-
-
-
-
 
         </div>
     )
