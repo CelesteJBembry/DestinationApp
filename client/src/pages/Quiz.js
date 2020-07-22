@@ -51,9 +51,8 @@ function Quiz(props) {
     return (
         <Row>
             <Col size="md-12">
-                <div>
+                <div >
                 {questions.map((question,i) =>  (
-                
                 <div key={i}>
                     
 

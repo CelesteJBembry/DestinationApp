@@ -3,7 +3,10 @@ import { useParams } from "react-router-dom";
 import API from "../utils/API";
 import { CityResults } from "../components/CityResults";
 import Contact from "./Contact";
-import { Alert, Card, Button, Col } from 'react-bootstrap';
+import { Alert, Card, Button, Col, Spinner } from 'react-bootstrap';
+//import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
+
 
 function Destination() {
     const [state, setState] = useState({})
@@ -45,15 +48,27 @@ function Destination() {
                     <Card.Text>
                     Price: {tour.price.amount * 1.15}
                     </Card.Text>
-                    <Button href={tour.vendor_tour_url} target="_blank">Click for more Info</Button>
+                    <Button variant="info" href={tour.vendor_tour_url} target="_blank">Click for more Info</Button>
                 </Card.Body>
                 </Card>
                 <br></br>
+        <Link variant="info"
+          to="/Destination"
+        >
+          &larr; Back to View More Cities
+        </Link>
             </div >
+
+    
+
 
         )
     }
-    else { return ("Loading...") }
+    else { return (
+    <Spinner variant="info" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+    </Spinner>) 
+    }
 
 
 }

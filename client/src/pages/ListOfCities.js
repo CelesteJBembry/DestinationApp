@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {Button, Row, Col } from 'react-bootstrap';
-//import logo192 from "../components/Images/logo192.png"
 import Boston from "../components/Images/Boston.jpg"
 import Chicago from "../components/Images/Chicago.jpg"
 import denver from "../components/Images/denver.jpg"

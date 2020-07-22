@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, ButtonGroup, Card} from 'react-bootstrap';
+import {Button, ButtonToolbar, ButtonGroup, Card} from 'react-bootstrap';
 //import "./style.css";
 // import API from "../../utils"
 
@@ -9,24 +9,23 @@ return (
 
       <Card>
          <Card.Body>
-         <p>{props.question}</p>
-            <ButtonGroup size="lg" className="mb-2">
+         <h3 style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>{props.question}</h3>
+            <ButtonToolbar size="lg" className="mb-2" style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
                {props.answers.map((answer,i)=>{
 
                   return (
-                  <div key ={i}> 
-                  <Button onClick= {props.loadChoices}
-                  >{answer["answer"+(i+1)]}</Button>
-                  <img height = "100" width= "100"
-                  src= {answer["img"] }/>
+                  <ButtonGroup>
+                  <Button variant="info" key={i} onClick= {props.loadChoices}>
+                     <img height = "175" width= "175"
+                        src= {answer["img"] }/>
+                     <h4>{answer["answer"+(i+1)]}</h4>
+                  </Button> {' '}
+                  </ButtonGroup>
 
-                  </div>
-               
-
-               )})}
+)})}
             
-            </ButtonGroup>
-         
+            </ButtonToolbar>
+   
          </Card.Body>
       </Card>
    

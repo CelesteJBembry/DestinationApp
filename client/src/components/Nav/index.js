@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Navbar, Nav} from 'react-bootstrap';
 
 
 function NavTabs(props) {
 
   return (
+    <Navbar bg="dark" variant="dark">
+      <Navbar.Brand href="/">Destiny</Navbar.Brand>
+      <Nav className="mr-auto">
+
     <ul className="nav nav-tabs">
       <li className="nav-item">
         <Link
@@ -42,6 +47,8 @@ function NavTabs(props) {
         </Link>
       </li>
     </ul >
+    </Nav>
+    </Navbar>
   );
 }
 
