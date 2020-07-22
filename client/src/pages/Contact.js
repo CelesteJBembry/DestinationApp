@@ -1,15 +1,30 @@
 import React from "react";
-import { Form, Col } from 'react-bootstrap';
-// import { Container } from "../Grid";
-
+import { Form, Col, ListGroup } from 'react-bootstrap';
 
 function Contact() {
   return (
     <div>
+      <div className="jumbotron">
+        <h1>The Destiny App Development Team</h1>
+        <p>Creating new solutions to challenging problems.</p>
+        <p>
+          <button className="btn btn-primary btn-lg">Learn more</button>
+        </p>
+        <ListGroup variant="flush">
+        <ListGroup.Item>Celeste Bembry</ListGroup.Item>
+        <ListGroup.Item>Brandon Lopez</ListGroup.Item>
+        <ListGroup.Item>Harpreet Aulakh</ListGroup.Item>
+        <ListGroup.Item>Lewis Cruz</ListGroup.Item>
+        </ListGroup>
+      </div>
 
+      <div className="jumbotron">
+      <h1>Contact Us!</h1>
+
+          <div className="card-body">
       <Form>
-        <h3>Contact Us!</h3>
         <Form.Row>
+        <Form.Label>Name</Form.Label>
           <Col>
             <Form.Control placeholder="First name" />
           </Col>
@@ -27,51 +42,11 @@ function Contact() {
           <Form.Label>Message</Form.Label>
           <Form.Control as="textarea" rows="4" />
         </Form.Group>
-      </Form>
+      </Form>       
 
-
-      <div className="jumbotron">
-        <h1>The Destiny App Development Team</h1>
-        <p>Creating new solutions to challenging problems.</p>
-        <p>
-          <button className="btn btn-primary btn-lg">Learn more</button>
-        </p>
-      </div>
-
-      <div className="card mb-4">
-        <div className="card-header">
-          <h3>Team Members</h3>
-
-          <div className="container">
-            <div className="jumbotron">
-              <h1>The Destiny App Development Team</h1>
-              <p>Creating new solutions to challenging problems.</p>
-              <p>
-                <button className="btn btn-primary btn-lg">Learn more</button>
-              </p>
-            </div>
-          </div>
-
-          <div className="card mb-4">
-            <div className="card-header">
-              <h3>Team Members</h3>
-
-            </div>
-          </div>
-
-          <div className="card-body">
-            <p className="card-text"><a href="">LinkedIn</a></p>
-            <ul>
-              <li>Celeste Bembry</li>
-              <li>Harpreet Aulakh</li>
-              <li>Brandon Lopez</li>
-              <li>Lewis Cruz</li>
-            </ul>
           </div>
         </div>
       </div>
-    </div>
-
   )
 }
 

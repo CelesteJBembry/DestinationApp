@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 import API from "../utils/API";
 import { CityResults } from "../components/CityResults";
 import Contact from "./Contact";
-import { Container } from "../components/Grid";
-import { Button } from 'react-bootstrap';
-
+import { Alert, Card, Button, Col } from 'react-bootstrap';
 
 function Destination() {
     const [state, setState] = useState({})
@@ -30,22 +28,27 @@ function Destination() {
     if (state.images, tour.name) {
         return (
             <div>
-                <h2>Your Next Destination</h2>
+                <Alert.Heading>Your Next Destination is...</Alert.Heading>
+                <h2>{state.id}, {state.parent_id} </h2>
+                <hr />
+                <Col >
+                <img src={state.images[0].source_url} rounded 
+                style={{ height: "50%", width: "80%" }} 
+                />
+                </Col>
+                <h5>{state.snippet}</h5>
                 <br></br>
-                <h2>{state.id}, {state.parent_id}</h2>
+                <Card>
+                <Card.Header as="h5">Available Tours in {state.id}</Card.Header>
+                <Card.Body>
+                    <Card.Title>Tour : {tour.name}</Card.Title>
+                    <Card.Text>
+                    Price: {tour.price.amount * 1.15}
+                    </Card.Text>
+                    <Button href={tour.vendor_tour_url} target="_blank">Click for more Info</Button>
+                </Card.Body>
+                </Card>
                 <br></br>
-                <p>{state.snippet}</p>
-                <img src={state.images[0].source_url} style={{ height: "50%", width: "90%" }} />
-                <br></br>
-                <br></br>
-                <h3>Availble Tours in {state.id}</h3>
-                <br></br>
-                <p>Tour Name : {tour.name}</p>
-
-                {/* var n = num.toFixed(2) */}
-                <p>Amount: {tour.price.amount * 1.15}</p>
-
-                <a href={tour.vendor_tour_url} target="_blank">Click for more Info</a>
             </div >
 
         )

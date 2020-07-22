@@ -5,7 +5,7 @@ function Footer() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary footer">
       <a className="navbar-brand" href="/">
-        Contact Us!
+        Destiny App
       </a>
     </nav>
   );

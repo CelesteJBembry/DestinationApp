@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Col, Row, Container } from "../components/Grid";
+//import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import MultiChoiceCard from "../components/MultiChoiceCard";
 import { withRouter } from 'react-router-dom'
+import {Col, Row, } from 'react-bootstrap';
 
 // const Button = withRouter(({ history }) => (
 //   <button

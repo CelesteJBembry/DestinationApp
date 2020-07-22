@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import MultiChoiceCard from "./components/MultiChoiceCard";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
-import { Col, Row, Container } from "./components/Grid";
+//import { Col, Row, Container } from "./components/Grid";
 // import API from "./utils/API";
 import Destination from "./pages/Destination";
 import NavTabs from "./components/Nav";
@@ -12,6 +12,8 @@ import Contact from "./pages/Contact";
 import Application from "./components/Application";
 import UserProvider from "./components/UserProvider";
 import ListOfCities from "./pages/ListOfCities";
+import { Col, Row, Container } from 'react-bootstrap';
+
 
 class App extends Component {
   constructor(props) {

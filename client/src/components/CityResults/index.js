@@ -1,7 +1,8 @@
 import React from "react";
-import { Col, Row, Container } from "../Grid";
+//import { Col, Row, Container } from "../Grid";
 import { image } from "react";
 // Results container
+//import { Form, Col, ListGroup } from 'react-bootstrap';
 
 export function CityResults({
 
