@@ -1,6 +1,5 @@
 import React from "react";
 //import Form from "../components/Firebase";
-import { Form, Button } from 'react-bootstrap';
 
 
 function SignIn() {

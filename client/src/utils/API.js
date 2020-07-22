@@ -5,6 +5,11 @@ require("dotenv").config();
 // Export an object containing methods we'll use for accessing the location and events
 export default {
 
+	fetchDestination: function (city) {
+		const triposoUrl = "https://www.triposo.com/api/latest/location.json";
+		const queryUrl = `${triposoUrl}?id=${city}&account=${process.env.REACT_APP_ACCOUNT}&token=${process.env.REACT_APP_TOKEN}`;
+		return axios.get(queryUrl);
+	},
 	getQuestions: function () {
 		return axios.get("/api/questions");
 	},
@@ -18,22 +23,17 @@ export default {
 	  // Saves a Question to the database
 	  saveQuestion: function(questionData) {
 		return axios.post("/api/questions", questionData);
-	  },
-	  
+	},
 
-    fetchTour: function (city) {
 
-        const triposoTourUrl = "https://www.triposo.com/api/20200405/tour.json?";
-        const tourQueryUrl = `${triposoTourUrl}location_ids=${city}&account=${process.env.REACT_APP_ACCOUNT}&token=${process.env.REACT_APP_TOKEN}`;
+	fetchTour: function (city) {
 
-        return axios
+		const triposoTourUrl = "https://www.triposo.com/api/20200405/tour.json?";
+		const tourQueryUrl = `${triposoTourUrl}location_ids=${city}&account=${process.env.REACT_APP_ACCOUNT}&token=${process.env.REACT_APP_TOKEN}`;
+
+		return axios
 			//.get(queryUrl)
-		.get(tourQueryUrl)
+			.get(tourQueryUrl)
 
 	},
-	fetchDestination: function (city) {
-		const triposoUrl = "https://www.triposo.com/api/latest/location.json";
-		const queryUrl = `${triposoUrl}?id=${city}&account=${process.env.REACT_APP_ACCOUNT}&token=${process.env.REACT_APP_TOKEN}`;
-		return axios.get(queryUrl);
-	}
 };

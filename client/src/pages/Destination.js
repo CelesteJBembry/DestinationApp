@@ -7,12 +7,12 @@ import { Container } from "../components/Grid";
 import { Button } from 'react-bootstrap';
 
 
-function Destination(props) {
+function Destination() {
     const [state, setState] = useState({})
     const [tour, setTour] = useState({})
     const { city } = useParams()
     useEffect(() => {
-        API.fetchDestination(props.city)
+        API.fetchDestination(city)
             .then(destination => {
                 setState(destination.data.results[0]);
                 console.log(destination.data);
@@ -30,31 +30,27 @@ function Destination(props) {
     if (state.images, tour.name) {
         return (
             <div>
-            <div>
-                <h3>Click to see your next Destination!</h3>
-                <Button href="#">Anchorage</Button> <Button type="submit">Button</Button>{' '}
-                <Button href="#">Chicago</Button> <Button type="submit">Button</Button>{' '}
-                <Button href="#">Denver</Button> <Button type="submit">Button</Button>{' '}
-                <Button href="#">Grand Canyon</Button> <Button type="submit">Button</Button>{' '}
-                <Button href="#">Houston</Button> <Button type="submit">Button</Button>{' '}
-                <Button href="#">Miami</Button> <Button type="submit">Button</Button>{' '}
-                <Button href="#">Raleigh</Button> <Button type="submit">Button</Button>{' '}
-                <Button href="#">Washington, DC</Button> <Button type="submit">Button</Button>{' '}
-            </div>
-            
-            <div>
-                <h3>Your Next Destination City is {state.id},{state.parent_id}</h3>
-                <li>{state.snippet}</li>
+                <h2>Your Next Destination</h2>
+                <br></br>
+                <h2>{state.id}, {state.parent_id}</h2>
+                <br></br>
+                <p>{state.snippet}</p>
                 <img src={state.images[0].source_url} style={{ height: "50%", width: "90%" }} />
+                <br></br>
+                <br></br>
                 <h3>Availble Tours in {state.id}</h3>
-                <li>Tour Name : {tour.name}</li>
-                <li>Amount: {tour.price.amount}</li>
-                <a href={tour.vendor_tour_url} >Click for more Info</a>
+                <br></br>
+                <p>Tour Name : {tour.name}</p>
+
+                {/* var n = num.toFixed(2) */}
+                <p>Amount: {tour.price.amount * 1.15}</p>
+
+                <a href={tour.vendor_tour_url} target="_blank">Click for more Info</a>
             </div >
-            </div>
+
         )
     }
-    else { return ("Loading") }
+    else { return ("Loading...") }
 
 
 }
