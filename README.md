@@ -1,29 +1,21 @@
-# Create React Express App
+# React Express App deployed to Heroku
 
-## About This Boilerplate
+Destination App allows users to take a quiz and based on their response it provides with a destination suggestion. 
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+The user is then presented with easy to read information about the city and some recommended places to visit. 
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+It also presents with availble tours in that city, avearge cost and option to book them if interested. 
 
-## Starting the app locally
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+![](images/screenshot.png)
 
-```
-npm install
-```
 
-This should install node modules within the server and the client folder.
+Click on the link below for an easy access to the application:
 
-After both installations complete, run the following command in your terminal:
+https://fierce-escarpment-58050.herokuapp.com/
 
-```
-npm start
-```
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
-## Deployment (Heroku)
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+
+
