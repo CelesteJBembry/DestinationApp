@@ -1,6 +1,6 @@
 # React Express App deployed to Heroku
 
-Destination App allows users to take a quiz and based on their response it provides with a destination suggestion. 
+Destiny the Destination App allows users to take a quiz and based on their response it provides with a destination suggestion. 
 
 The user is then presented with easy to read information about the city and some recommended places to visit. 
 
