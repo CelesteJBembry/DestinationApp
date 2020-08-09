@@ -4,7 +4,7 @@ Destination App allows users to take a quiz and based on their response it provi
 
 The user is then presented with easy to read information about the city and some recommended places to visit. 
 
-It also presents with availble tours in that city, avearge cost and option to book them if interested. 
+It also presents with availble tours in that city, average cost and option to book them if interested. 
 
 
 ![](images/screenshot.png)
